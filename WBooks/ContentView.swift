@@ -9,18 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ZStack {
+            ImageBackground()
+            
+            VStack {
+                LoginForm()
+            }
+            .padding()
         }
-        .padding()
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct ImageBackground: View {
+    var body: some View {
+        Image("bc_inicio")
+            .resizable()
+            .scaledToFill()
+            .edgesIgnoringSafeArea(.all)
     }
 }
