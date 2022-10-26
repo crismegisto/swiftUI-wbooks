@@ -15,6 +15,7 @@
 		AFA552642908DE1900CD1051 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA552632908DE1900CD1051 /* AppView.swift */; };
 		AFA552662908DE2700CD1051 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA552652908DE2700CD1051 /* CustomButton.swift */; };
 		AFA552682908DE3F00CD1051 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA552672908DE3F00CD1051 /* LoginForm.swift */; };
+		AFA552702909798400CD1051 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA5526F2909798400CD1051 /* Color.swift */; };
 		AFBDD8CB2906AA6C00BEB8E9 /* WBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDD8CA2906AA6C00BEB8E9 /* WBooksApp.swift */; };
 		AFBDD8CF2906AA6E00BEB8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBDD8CE2906AA6E00BEB8E9 /* Assets.xcassets */; };
 		AFBDD8D22906AA6E00BEB8E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBDD8D12906AA6E00BEB8E9 /* Preview Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		AFA552632908DE1900CD1051 /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		AFA552652908DE2700CD1051 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		AFA552672908DE3F00CD1051 /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		AFA5526F2909798400CD1051 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		AFBDD8C72906AA6C00BEB8E9 /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBDD8CA2906AA6C00BEB8E9 /* WBooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksApp.swift; sourceTree = "<group>"; };
 		AFBDD8CE2906AA6E00BEB8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		AFA5526E2909796900CD1051 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				AFA5526F2909798400CD1051 /* Color.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		AFBDD8BE2906AA6C00BEB8E9 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,7 @@
 				AFA552602908095F00CD1051 /* Model */,
 				AFA552572907FDBB00CD1051 /* Modifiers */,
 				AFBDD8CE2906AA6E00BEB8E9 /* Assets.xcassets */,
+				AFA5526E2909796900CD1051 /* Utils */,
 				AFA5525B2908071E00CD1051 /* Resources */,
 				AFBDD8D02906AA6E00BEB8E9 /* Preview Content */,
 			);
@@ -319,6 +330,7 @@
 			files = (
 				AFE97BF329079903001B29C8 /* BookList.swift in Sources */,
 				AFE97BDF29077D80001B29C8 /* ImageBackground.swift in Sources */,
+				AFA552702909798400CD1051 /* Color.swift in Sources */,
 				AFA5525F2908092800CD1051 /* ModelData.swift in Sources */,
 				AFA552562907FD3F00CD1051 /* TextFieldModifier.swift in Sources */,
 				AFA552642908DE1900CD1051 /* AppView.swift in Sources */,
