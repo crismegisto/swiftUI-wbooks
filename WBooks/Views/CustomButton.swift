@@ -29,7 +29,7 @@ struct CustomButton: View {
 
 struct CustomButton_Previews: PreviewProvider {
     static var mockAction : () -> Void = { }
-
+    
     static var previews: some View {
         CustomButton("Custom Button", action: mockAction)
     }

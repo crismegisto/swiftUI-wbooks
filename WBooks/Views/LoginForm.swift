@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct LoginForm: View {
-    @State var userName: String = ""
-    @State var password: String = ""
+    @State private var userName: String = ""
+    @State private var password: String = ""
     @Binding var isValid: Bool
     
     func handleLogin() {
-        if userName.isEmpty && password.isEmpty {
-            print("sada")
+        if !userName.isEmpty && !password.isEmpty {
             isValid = true
         }
     }
