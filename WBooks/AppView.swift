@@ -11,11 +11,8 @@ struct AppView: View {
     var body: some View {
         ZStack {
             ImageBackground()
-            
-            VStack {
-                LoginForm()
-            }
-            .padding()
+            LoginForm()
+                .padding()
         }
     }
 }

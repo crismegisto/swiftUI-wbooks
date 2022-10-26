@@ -11,7 +11,7 @@ struct CustomButton: View {
     let buttonName: String
     let action: () -> Void
     
-    init(_ buttonName: String, action: @escaping () -> Void){
+    init(_ buttonName: String, action: @escaping () -> Void = {}){
         self.buttonName = buttonName
         self.action = action
     }
@@ -28,9 +28,7 @@ struct CustomButton: View {
 }
 
 struct CustomButton_Previews: PreviewProvider {
-    static var mockAction : () -> Void = { }
-
     static var previews: some View {
-        CustomButton("Custom Button", action: mockAction)
+        CustomButton("Custom Button")
     }
 }
