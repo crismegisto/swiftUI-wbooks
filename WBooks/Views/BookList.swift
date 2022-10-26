@@ -10,8 +10,7 @@ import SwiftUI
 struct BookList: View {
     init() {
         let coloredAppearance = UINavigationBarAppearance()
-        coloredAppearance.backgroundColor = UIColor(Color(hue: 0.558, saturation: 0.735, brightness: 0.949)
-        )
+        coloredAppearance.backgroundColor = UIColor(Color.wBlue)
         coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().standardAppearance = coloredAppearance
@@ -31,16 +30,12 @@ struct BookList: View {
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle("LIBRARY")
-            .toolbar{
+            .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    IconButton("ic_notifications", action: {
-                        print("iconButton pressed")
-                    })
+                    IconButton("ic_notifications")
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    IconButton("ic_search", action: {
-                        print("iconButton pressed")
-                    })
+                    IconButton("ic_search")
                 }
             }
         }

@@ -14,7 +14,7 @@ struct IconButton: View {
         Image(iconName)
     }
     
-    init(_ buttonName: String, action: @escaping () -> Void){
+    init(_ buttonName: String, action: @escaping () -> Void = {}){
         self.iconName = buttonName
         self.action = action
     }
@@ -29,10 +29,8 @@ struct IconButton: View {
 }
 
 struct IconButton_Previews: PreviewProvider {
-    static var mockAction : () -> Void = { }
-    
     static var previews: some View {
-        IconButton("ic_search_placeholder", action: mockAction)
+        IconButton("ic_search_placeholder")
     }
 }
 
