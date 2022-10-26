@@ -43,6 +43,7 @@ struct BookList: View {
                 }
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
