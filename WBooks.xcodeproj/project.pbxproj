@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		AFBDD8CB2906AA6C00BEB8E9 /* WBooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDD8CA2906AA6C00BEB8E9 /* WBooksApp.swift */; };
-		AFBDD8CD2906AA6C00BEB8E9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDD8CC2906AA6C00BEB8E9 /* ContentView.swift */; };
+		AFBDD8CD2906AA6C00BEB8E9 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDD8CC2906AA6C00BEB8E9 /* AppView.swift */; };
 		AFBDD8CF2906AA6E00BEB8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBDD8CE2906AA6E00BEB8E9 /* Assets.xcassets */; };
 		AFBDD8D22906AA6E00BEB8E9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFBDD8D12906AA6E00BEB8E9 /* Preview Assets.xcassets */; };
 		AFBDD8DC2906AA6F00BEB8E9 /* WBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDD8DB2906AA6F00BEB8E9 /* WBooksTests.swift */; };
 		AFBDD8E62906AA6F00BEB8E9 /* WBooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDD8E52906AA6F00BEB8E9 /* WBooksUITests.swift */; };
 		AFBDD8E82906AA6F00BEB8E9 /* WBooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDD8E72906AA6F00BEB8E9 /* WBooksUITestsLaunchTests.swift */; };
+		AFBDD8F52906B2F600BEB8E9 /* LoginForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDD8F42906B2F600BEB8E9 /* LoginForm.swift */; };
+		AFBDD8F72906B30200BEB8E9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDD8F62906B30200BEB8E9 /* CustomButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 /* Begin PBXFileReference section */
 		AFBDD8C72906AA6C00BEB8E9 /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBDD8CA2906AA6C00BEB8E9 /* WBooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksApp.swift; sourceTree = "<group>"; };
-		AFBDD8CC2906AA6C00BEB8E9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AFBDD8CC2906AA6C00BEB8E9 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		AFBDD8CE2906AA6E00BEB8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFBDD8D12906AA6E00BEB8E9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFBDD8D72906AA6F00BEB8E9 /* WBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +46,8 @@
 		AFBDD8E12906AA6F00BEB8E9 /* WBooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WBooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBDD8E52906AA6F00BEB8E9 /* WBooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITests.swift; sourceTree = "<group>"; };
 		AFBDD8E72906AA6F00BEB8E9 /* WBooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AFBDD8F42906B2F600BEB8E9 /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
+		AFBDD8F62906B30200BEB8E9 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +99,9 @@
 			isa = PBXGroup;
 			children = (
 				AFBDD8CA2906AA6C00BEB8E9 /* WBooksApp.swift */,
-				AFBDD8CC2906AA6C00BEB8E9 /* ContentView.swift */,
+				AFBDD8CC2906AA6C00BEB8E9 /* AppView.swift */,
+				AFBDD8F62906B30200BEB8E9 /* CustomButton.swift */,
+				AFBDD8F42906B2F600BEB8E9 /* LoginForm.swift */,
 				AFBDD8CE2906AA6E00BEB8E9 /* Assets.xcassets */,
 				AFBDD8D02906AA6E00BEB8E9 /* Preview Content */,
 			);
@@ -257,7 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFBDD8CD2906AA6C00BEB8E9 /* ContentView.swift in Sources */,
+				AFBDD8F72906B30200BEB8E9 /* CustomButton.swift in Sources */,
+				AFBDD8CD2906AA6C00BEB8E9 /* AppView.swift in Sources */,
+				AFBDD8F52906B2F600BEB8E9 /* LoginForm.swift in Sources */,
 				AFBDD8CB2906AA6C00BEB8E9 /* WBooksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
