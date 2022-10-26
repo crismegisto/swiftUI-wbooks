@@ -53,11 +53,8 @@
 		AFA552632908DE1900CD1051 /* AppView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		AFA552652908DE2700CD1051 /* CustomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		AFA552672908DE3F00CD1051 /* LoginForm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginForm.swift; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		AFA55269290966F900CD1051 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
-=======
 		AFA5526F2909798400CD1051 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
->>>>>>> table-UI
 		AFBDD8C72906AA6C00BEB8E9 /* WBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBDD8CA2906AA6C00BEB8E9 /* WBooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WBooksApp.swift; sourceTree = "<group>"; };
 		AFBDD8CE2906AA6E00BEB8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
