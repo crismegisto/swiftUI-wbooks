@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  AppView.swift
 //  WBooks
 //
 //  Created by Cristian Romero on 24/10/22.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AppView: View {
     var body: some View {
         ZStack {
             ImageBackground()
@@ -20,9 +20,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct AppView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AppView()
     }
 }
 

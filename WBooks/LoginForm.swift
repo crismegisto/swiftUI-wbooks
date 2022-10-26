@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct LoginForm: View {
-    @State var userName: String = ""
-    @State var password: String = ""
+    @State private var userName: String = ""
+    @State private var password: String = ""
     
     func signIn() {
         print(self.userName, self.password)
@@ -19,14 +19,13 @@ struct LoginForm: View {
         VStack {
             TextField("Nombre de usuario", text: $userName)
                 .modifier(TextFieldModifier())
-                
+            
             SecureField("Contraseña", text: $password)
                 .modifier(TextFieldModifier())
                 .padding(.bottom, 40)
-                        
-            Button(action: signIn) {
-                CustomButton(buttonName: "Iniciar Sesión")
-            }
+            
+            CustomButton("Iniciar Sesión", action: signIn)
+            
         }
     }
 }

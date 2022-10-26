@@ -8,18 +8,29 @@
 import SwiftUI
 
 struct CustomButton: View {
-    var buttonName: String = "Custom Button"
+    let buttonName: String
+    let action: () -> Void
+    
+    init(_ buttonName: String, action: @escaping () -> Void){
+        self.buttonName = buttonName
+        self.action = action
+    }
+    
     var body: some View {
-        Text(buttonName)
-            .foregroundColor(.white)
-            .frame(width: 160, height: 60)
-            .background(.blue)
-            .cornerRadius(10)
+        Button(action: action) {
+            Text(buttonName)
+                .foregroundColor(.white)
+                .frame(width: 160, height: 60)
+                .background(.blue)
+                .cornerRadius(10)
+        }
     }
 }
 
 struct CustomButton_Previews: PreviewProvider {
+    static var mockAction : () -> Void = { }
+
     static var previews: some View {
-        CustomButton()
+        CustomButton("Custom Button", action: mockAction)
     }
 }
