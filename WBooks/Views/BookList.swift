@@ -13,7 +13,7 @@ struct BookList: View {
             List(books) { book in
                 BookCard(book: book)
                     .listRowBackground(ZStack {
-                        Color(red: 0.7647058823529411, green: 0.8745098039215686, blue: 0.9607843137254902)
+                        Color.wLightBlue.ignoresSafeArea()
                         
                     })
                     .listRowSeparator(.hidden)

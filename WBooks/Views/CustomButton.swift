@@ -21,7 +21,7 @@ struct CustomButton: View {
             Text(buttonName)
                 .foregroundColor(.white)
                 .frame(width: 160, height: 60)
-                .background(Color.cyan)
+                .background(Color.wCyan)
                 .cornerRadius(10)
         }
     }

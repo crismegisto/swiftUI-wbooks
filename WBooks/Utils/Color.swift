@@ -9,10 +9,9 @@ import Foundation
 import SwiftUI
 
 extension Color {
-    static let backgroundBlue = hexStringToUIColor("#121F3D")
-    static let blueGray = hexStringToUIColor("#24385B")
-    static let cyan = hexStringToUIColor("#49FFC8")
-    static let darkCyan = hexStringToUIColor("#3FCAA0")
+    public static let wBlue = hexStringToUIColor("#00ADEE")
+    static let wLightBlue = hexStringToUIColor("#C3DFF5")
+    static let wCyan = hexStringToUIColor("#0BD5D6")
 }
 
 extension Color {
