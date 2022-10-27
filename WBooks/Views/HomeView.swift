@@ -9,41 +9,45 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        TabView {
-            BookList()
-                .tabItem {
-                    Image("ic_library")
-                        .renderingMode(.template)
-                    Text("Library")
-                }
-            
-            Text("Wishlist")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
-                .tabItem {
-                    Image("ic_wishlist")
-                        .renderingMode(.template)
-                    Text("Wishlist")
-                }
-            
-            Text("Suggest")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
-                .tabItem {
-                    Image("ic_add_new")
-                        .renderingMode(.template)
-                    Text("Suggest")
-                }
-            
-            Text("Rentals")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
-                .tabItem {
-                    Image("ic_myrentals")
-                        .renderingMode(.template)
-                    Text("Rentals")
-                }
+        NavigationView {
+            TabView {
+                BookList()
+                    .tabItem {
+                        Image("ic_library")
+                            .renderingMode(.template)
+                        Text("Library")
+                    }
+                
+                Text("Wishlist")
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .tabItem {
+                        Image("ic_wishlist")
+                            .renderingMode(.template)
+                        Text("Wishlist")
+                    }
+                
+                Text("Suggest")
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .tabItem {
+                        Image("ic_add_new")
+                            .renderingMode(.template)
+                        Text("Suggest")
+                    }
+                
+                Text("Rentals")
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                    .tabItem {
+                        Image("ic_myrentals")
+                            .renderingMode(.template)
+                        Text("Rentals")
+                    }
+            }
+            .onAppear() {
+                UITabBar.appearance().barTintColor = .white
+            }
+            .navigationBarTitle("LIBRARY")
         }
-        .onAppear() {
-            UITabBar.appearance().barTintColor = .white
-        }
+        .navigationBarBackButtonHidden(true)
     }
 }
 

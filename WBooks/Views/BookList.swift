@@ -19,7 +19,6 @@ struct BookList: View {
     }
     
     var body: some View {
-        NavigationView {
             List(books) { book in
                 BookCard(book: book)
                     .listRowBackground(ZStack {
@@ -29,7 +28,6 @@ struct BookList: View {
                     .listRowSeparator(.hidden)
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitle("LIBRARY")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     IconButton("ic_notifications")
@@ -39,12 +37,10 @@ struct BookList: View {
                 }
             }
         }
-        .navigationBarBackButtonHidden(true)
     }
-}
-
-struct BookList_Previews: PreviewProvider {
-    static var previews: some View {
-        BookList()
+    
+    struct BookList_Previews: PreviewProvider {
+        static var previews: some View {
+            BookList()
+        }
     }
-}
