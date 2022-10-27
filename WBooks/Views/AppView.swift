@@ -13,7 +13,7 @@ struct AppView: View {
     var body: some View {
         NavigationView {
             VStack {
-                NavigationLink(destination: BookList(), isActive: $isActive) { EmptyView() }
+                NavigationLink(destination: HomeView(), isActive: $isActive) { EmptyView() }
                 LoginForm(isValid: $isActive)
             }
         }
