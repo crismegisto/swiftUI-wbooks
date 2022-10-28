@@ -8,6 +8,16 @@
 import SwiftUI
 
 struct BookList: View {
+    init() {
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.backgroundColor = UIColor(Color.wBlue)
+        coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+        UINavigationBar.appearance().tintColor = .white
+    }
+    
     var body: some View {
         NavigationView {
             List(books) { book in
@@ -19,8 +29,17 @@ struct BookList: View {
                     .listRowSeparator(.hidden)
             }
             .listStyle(GroupedListStyle())
-            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitle("LIBRARY")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    IconButton("ic_notifications")
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    IconButton("ic_search")
+                }
+            }
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 
