@@ -7,12 +7,12 @@
 
 import Foundation
 
-var books: [Book] = load("mockBooks.json")
+var books: [Book] = load("mockBooks")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
 
-    guard let file = Bundle.main.url(forResource: "mockBooks", withExtension: "json")
+    guard let file = Bundle.main.url(forResource: filename, withExtension: "json")
     else {
         fatalError("Couldn't find \(filename) in main bundle.")
     }

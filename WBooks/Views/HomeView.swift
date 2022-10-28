@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct HomeView: View {
+    init() {
+        let coloredAppearance = UINavigationBarAppearance()
+        coloredAppearance.backgroundColor = UIColor(Color.wBlue)
+        coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().standardAppearance = coloredAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
+        UINavigationBar.appearance().tintColor = .white
+    }
     var body: some View {
         NavigationView {
             TabView {
@@ -46,8 +55,10 @@ struct HomeView: View {
                 UITabBar.appearance().barTintColor = .white
             }
             .navigationBarTitle("LIBRARY")
+            .navigationBarTitleDisplayMode(.inline)
         }
         .navigationBarBackButtonHidden(true)
+        .navigationViewStyle(.stack)
     }
 }
 
