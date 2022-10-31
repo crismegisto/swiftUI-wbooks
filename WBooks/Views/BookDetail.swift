@@ -10,7 +10,8 @@ import SwiftUI
 struct BookDetail: View {
     let DEFAULT_SPACE = 20.0
     var book: Book
-    let action: () -> Void
+    
+    @State private var showingAlert = false
     
     var body: some View {
         VStack {
@@ -36,7 +37,14 @@ struct BookDetail: View {
             VStack {
                 CustomButton("ADD TO WISHLIST")
                     .padding(.bottom, 10)
-                CustomButton("RENT", solid: true, action: action)
+                CustomButton("RENT", solid: true, action: {
+                    if(!book.available) {
+                        showingAlert = true
+                    }
+                })
+                .alert("The book is not available", isPresented: $showingAlert) {
+                    Button("Ok", action: {})
+                }
             }
             .padding(.bottom, 20)
             .padding(.horizontal, DEFAULT_SPACE*1.5)
@@ -48,7 +56,7 @@ struct BookDetail: View {
 
 struct BookDetail_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetail(book: books[0], action: {})
+        BookDetail(book: books[0])
     }
 }
 

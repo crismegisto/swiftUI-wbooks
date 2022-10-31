@@ -9,26 +9,20 @@ import SwiftUI
 
 struct BookList: View {    
     var body: some View {
-        List(books) { book in
-            BookCard(book: book)
-                .listRowBackground(ZStack {
-                    Color.wLightBlue.ignoresSafeArea()
-                })
-                .listRowSeparator(.hidden)
-                .overlay(NavigationLink(destination: ContentBookDetail(book: book), label: {
-                    EmptyView()
-                }).opacity(0))
-        }
-        .listStyle(GroupedListStyle())
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                IconButton("ic_notifications")
+        ZStack {
+            Color.wLightBlue.ignoresSafeArea()
+            List(books) { book in
+                BookCard(book: book)
+                    .listRowBackground(ZStack {
+                        Color.wLightBlue.ignoresSafeArea()
+                    })
+                    .listRowSeparator(.hidden)
+                    .overlay(NavigationLink(destination: ContentBookDetail(book: book), label: {
+                        EmptyView()
+                    }).opacity(0))
             }
-            ToolbarItem(placement: .navigationBarTrailing) {
-                IconButton("ic_search")
-            }
+            .listStyle(PlainListStyle())
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 
