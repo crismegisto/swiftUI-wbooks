@@ -28,7 +28,7 @@ struct HomeView: View {
                 }
             
             Text("Wishlist")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .modifier(HeaderTitleModifier())
                 .tabItem {
                     Image("ic_wishlist")
                         .renderingMode(.template)
@@ -36,7 +36,7 @@ struct HomeView: View {
                 }
             
             Text("Suggest")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .modifier(HeaderTitleModifier())
                 .tabItem {
                     Image("ic_add_new")
                         .renderingMode(.template)
@@ -44,7 +44,7 @@ struct HomeView: View {
                 }
             
             Text("Rentals")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .modifier(HeaderTitleModifier())
                 .tabItem {
                     Image("ic_myrentals")
                         .renderingMode(.template)
