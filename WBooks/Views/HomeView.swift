@@ -28,7 +28,7 @@ struct HomeView: View {
                 }
             
             Text("Wishlist")
-                .modifier(HeaderTitleModifier())
+                .modifier(BasicTextModifier(size: 30))
                 .tabItem {
                     Image("ic_wishlist")
                         .renderingMode(.template)
@@ -36,7 +36,7 @@ struct HomeView: View {
                 }
             
             Text("Suggest")
-                .modifier(HeaderTitleModifier())
+                .modifier(BasicTextModifier(size: 30))
                 .tabItem {
                     Image("ic_add_new")
                         .renderingMode(.template)
@@ -44,7 +44,7 @@ struct HomeView: View {
                 }
             
             Text("Rentals")
-                .modifier(HeaderTitleModifier())
+                .modifier(BasicTextModifier(size: 30))
                 .tabItem {
                     Image("ic_myrentals")
                         .renderingMode(.template)

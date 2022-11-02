@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		AF042477290A696D00288BEB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF042476290A696D00288BEB /* HomeView.swift */; };
 		AF40AAA0290C3F3B00675F18 /* Conditional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF40AA9F290C3F3B00675F18 /* Conditional.swift */; };
-		AF4AF760291238FB0085C82C /* HeaderTitleModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4AF75F291238FB0085C82C /* HeaderTitleModifier.swift */; };
+		AF4AF76229123B4A0085C82C /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4AF76129123B4A0085C82C /* GlobalConstants.swift */; };
+		AF4AF76429123FC80085C82C /* BasicTextModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4AF76329123FC80085C82C /* BasicTextModifier.swift */; };
 		AFA552562907FD3F00CD1051 /* TextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA552552907FD3F00CD1051 /* TextFieldModifier.swift */; };
 		AFA5525A2908007200CD1051 /* BookCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA552592908007200CD1051 /* BookCard.swift */; };
 		AFA5525D290808AE00CD1051 /* mockBooks.json in Resources */ = {isa = PBXBuildFile; fileRef = AFA5525C290808AE00CD1051 /* mockBooks.json */; };
@@ -52,7 +53,8 @@
 /* Begin PBXFileReference section */
 		AF042476290A696D00288BEB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		AF40AA9F290C3F3B00675F18 /* Conditional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conditional.swift; sourceTree = "<group>"; };
-		AF4AF75F291238FB0085C82C /* HeaderTitleModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTitleModifier.swift; sourceTree = "<group>"; };
+		AF4AF76129123B4A0085C82C /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
+		AF4AF76329123FC80085C82C /* BasicTextModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextModifier.swift; sourceTree = "<group>"; };
 		AFA552552907FD3F00CD1051 /* TextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldModifier.swift; sourceTree = "<group>"; };
 		AFA552592908007200CD1051 /* BookCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCard.swift; sourceTree = "<group>"; };
 		AFA5525C290808AE00CD1051 /* mockBooks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mockBooks.json; sourceTree = "<group>"; };
@@ -107,7 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				AFA552552907FD3F00CD1051 /* TextFieldModifier.swift */,
-				AF4AF75F291238FB0085C82C /* HeaderTitleModifier.swift */,
+				AF4AF76329123FC80085C82C /* BasicTextModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -151,6 +153,7 @@
 			children = (
 				AFA5526F2909798400CD1051 /* Color.swift */,
 				AF40AA9F290C3F3B00675F18 /* Conditional.swift */,
+				AF4AF76129123B4A0085C82C /* GlobalConstants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -354,14 +357,15 @@
 				AFA5525F2908092800CD1051 /* ModelData.swift in Sources */,
 				AFE0BFB8290B99F700AA4CFB /* ContentBookDetail.swift in Sources */,
 				AFA552562907FD3F00CD1051 /* TextFieldModifier.swift in Sources */,
-				AF4AF760291238FB0085C82C /* HeaderTitleModifier.swift in Sources */,
 				AFA552642908DE1900CD1051 /* AppView.swift in Sources */,
+				AF4AF76229123B4A0085C82C /* GlobalConstants.swift in Sources */,
 				AFA552682908DE3F00CD1051 /* LoginForm.swift in Sources */,
 				AFA5526A290966FA00CD1051 /* IconButton.swift in Sources */,
 				AFA552662908DE2700CD1051 /* CustomButton.swift in Sources */,
 				AFA5525A2908007200CD1051 /* BookCard.swift in Sources */,
 				AFA552622908098F00CD1051 /* Book.swift in Sources */,
 				AFBDD8CB2906AA6C00BEB8E9 /* WBooksApp.swift in Sources */,
+				AF4AF76429123FC80085C82C /* BasicTextModifier.swift in Sources */,
 				AFE0BFBA290BA45200AA4CFB /* BookDetail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,46 +8,14 @@
 import SwiftUI
 
 struct BookDetail: View {
-    let DEFAULT_SPACE = 20.0
     var book: Book
-    
     @State private var showingAlert = false
     
     var body: some View {
         VStack {
-            HStack(alignment: .top, spacing: DEFAULT_SPACE) {
-                book.image
-                    .resizable()
-                    .frame(width: 70, height: 100)
-                    .padding(.vertical, DEFAULT_SPACE)
-                    .padding(.leading, DEFAULT_SPACE*1.5)
-                
-                VStack(alignment: .leading) {
-                    Text(book.title)
-                        .font(.headline)
-                        .bold()
-                    
-                    BookDescription(book: book)
-                }
-                .padding(.vertical, DEFAULT_SPACE)
-                
-                Spacer()
-            }
+            BookInformation
             
-            VStack {
-                CustomButton("ADD TO WISHLIST")
-                    .padding(.bottom, 10)
-                CustomButton("RENT", solid: true, action: {
-                    if(!book.available) {
-                        showingAlert = true
-                    }
-                })
-                .alert("The book is not available", isPresented: $showingAlert) {
-                    Button("Ok", action: {})
-                }
-            }
-            .padding(.bottom, 20)
-            .padding(.horizontal, DEFAULT_SPACE*1.5)
+            Buttons
         }
         .background(.white)
         .cornerRadius(10)
@@ -60,21 +28,61 @@ struct BookDetail_Previews: PreviewProvider {
     }
 }
 
-struct BookDescription: View {
-    var book: Book
-    var body: some View {
+private extension BookDetail {
+    var BookInformation : some View {
+        HStack(alignment: .top, spacing: GlobalConstants.Spaces.DEFAULT_SPACE) {
+            book.image
+                .resizable()
+                .frame(width: 70, height: 100)
+                .padding(.vertical, GlobalConstants.Spaces.DEFAULT_SPACE)
+                .padding(.leading, GlobalConstants.Spaces.DEFAULT_SPACE*1.5)
+            
+            VStack(alignment: .leading) {
+                Text(book.title)
+                    .font(.headline)
+                    .bold()
+                
+                BookDescription
+            }
+            .padding(.vertical, GlobalConstants.Spaces.DEFAULT_SPACE)
+            
+            Spacer()
+        }
+    }
+}
+
+private extension BookDetail {
+    var BookDescription : some View {
         VStack(alignment: .leading) {
             book.available ?
             Text("Available")
-                .bold()
-                .foregroundColor(.green)
+                .modifier(BasicTextModifier(color: .green))
             : Text("Unavailable")
-                .bold()
-                .foregroundColor(.red)
+                .modifier(BasicTextModifier(color: .red))
             Text(book.author)
             Text(book.year)
             Text(book.genre)
         }
         .font(.subheadline)
+    }
+}
+
+
+private extension BookDetail {
+    var Buttons : some View {
+        VStack {
+            CustomButton("ADD TO WISHLIST")
+                .padding(.bottom, 10)
+            CustomButton("RENT", solid: true, action: {
+                if(!book.available) {
+                    showingAlert = true
+                }
+            })
+            .alert("The book is not available", isPresented: $showingAlert) {
+                Button("Ok", action: {})
+            }
+        }
+        .padding(.bottom, 20)
+        .padding(.horizontal, GlobalConstants.Spaces.DEFAULT_SPACE*1.5)
     }
 }
