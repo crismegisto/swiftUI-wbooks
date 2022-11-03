@@ -17,6 +17,7 @@ struct AppView: View {
                 LoginForm(isValid: $isActive)
             }
         }
+        .accentColor(.white)
     }
 }
 

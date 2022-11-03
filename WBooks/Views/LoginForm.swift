@@ -13,7 +13,7 @@ struct LoginForm: View {
     @Binding var isValid: Bool
     
     func handleLogin() {
-        if !userName.isEmpty && !password.isEmpty {
+        if userName.isEmpty && password.isEmpty {
             isValid = true
         }
     }
@@ -31,8 +31,8 @@ struct LoginForm: View {
                     .padding(.bottom, 40)
                 
                 
-                CustomButton("Iniciar Sesión", action: handleLogin)
-                
+                CustomButton("Iniciar Sesión", solid: true, action: handleLogin)
+                    .padding(.horizontal, 40)
             }
             .padding()
         }

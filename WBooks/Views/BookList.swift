@@ -7,40 +7,27 @@
 
 import SwiftUI
 
-struct BookList: View {
-    init() {
-        let coloredAppearance = UINavigationBarAppearance()
-        coloredAppearance.backgroundColor = UIColor(Color.wBlue)
-        coloredAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        coloredAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        UINavigationBar.appearance().standardAppearance = coloredAppearance
-        UINavigationBar.appearance().scrollEdgeAppearance = coloredAppearance
-        UINavigationBar.appearance().tintColor = .white
-    }
-    
+struct BookList: View {    
     var body: some View {
+        ZStack {
+            Color.wLightBlue.ignoresSafeArea()
             List(books) { book in
                 BookCard(book: book)
                     .listRowBackground(ZStack {
                         Color.wLightBlue.ignoresSafeArea()
-                        
                     })
                     .listRowSeparator(.hidden)
+                    .overlay(NavigationLink(destination: ContentBookDetail(book: book), label: {
+                        EmptyView()
+                    }).opacity(0))
             }
-            .listStyle(GroupedListStyle())
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    IconButton("ic_notifications")
-                }
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    IconButton("ic_search")
-                }
-            }
+            .listStyle(PlainListStyle())
         }
     }
-    
-    struct BookList_Previews: PreviewProvider {
-        static var previews: some View {
-            BookList()
-        }
+}
+
+struct BookList_Previews: PreviewProvider {
+    static var previews: some View {
+        BookList()
     }
+}

@@ -15,6 +15,7 @@ struct Book: Hashable, Codable, Identifiable {
     var genre: String
     var publisher: String
     var year: String
+    var available: Bool
     
     private var imageName: String
     var image: Image {

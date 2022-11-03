@@ -10,19 +10,31 @@ import SwiftUI
 struct CustomButton: View {
     let buttonName: String
     let action: () -> Void
+    let solid: Bool
     
-    init(_ buttonName: String, action: @escaping () -> Void = {}){
+    init(_ buttonName: String, solid: Bool = false, action: @escaping () -> Void = {}){
         self.buttonName = buttonName
+        self.solid = solid
         self.action = action
     }
     
     var body: some View {
         Button(action: action) {
             Text(buttonName)
-                .foregroundColor(.white)
-                .frame(width: 160, height: 60)
+                .fontWeight(.bold)
+                .frame(minWidth: 100, maxWidth: .infinity, minHeight: 44)
+                .if(!solid) { view in
+                    view
+                        .background(Color.white)
+                        .foregroundColor(Color.wBlue)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 30)
+                                .stroke(Color.wBlue, lineWidth: 3)
+                        )
+                }
                 .background(Color.wCyan)
-                .cornerRadius(10)
+                .foregroundColor(.white)
+                .cornerRadius(30)
         }
     }
 }
